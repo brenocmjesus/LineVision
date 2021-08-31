@@ -1,0 +1,292 @@
+/* id=# class=.*/
+
+
+/* essa tag reseta todas as configurações da pagina*/
+
+ :root {
+    --darkblue: #363f5f;
+    --green: #49AA26;
+    --ligth-green: #3dd705;
+    --red: #e92929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background: rgb(211, 210, 210);
+    font-family: "Poppins";
+}
+
+.sr-only {
+    /*SCREAM READER OLNLY*/
+    position: absolute;
+    /*position absolute é sempre relativo ao pai que ele está absoluto é cima e a esquerda*/
+    width: 1px;
+    height: 1px;
+    /*tricks css*/
+    /* tudo isso é para deixar o título na tela invisível aos olhos mas um leitor de tela consegue ler*/
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.container {
+    width: min(90vw, 800px);
+    /* minimo de view ou px - largura da tela - função min procura o menor dos valores passados*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /* quebra o comportamento do html padrão e coloca um ao lado do outro*/
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+/*Titles ===========================================*/
+
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: #363f5f;
+    font-weight: normal;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--ligth-green);
+}
+
+
+/*header ===========================================*/
+
+header {
+    background: #3a0202;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+header h1 {
+    color: white;
+    font-size: 50px;
+}
+
+#logo {
+    color: white;
+    font-size: 100%;
+}
+
+
+/*balance ===========================================*/
+
+#homeDisplay {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#homeDisplay h2 {
+    color: white;
+    margin-top: 0;
+}
+
+
+/*Cards ===========================================*/
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+    color: var(--darkblue);
+}
+
+.card h3 {
+    font-weight: normal;
+    font-size: 1.3rem;
+    display: flex;
+    /* quebra o comportamento do html padrão e coloca um ao lado do outro*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*subCards==========================================*/
+
+.subCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/*subCard==========================================*/
+
+.subCard {
+    height: 50px;
+    width: 85px;
+    margin: 5px;
+    background: rgb(80, 66, 66);
+    padding: 5px;
+    border-radius: 0.25rem;
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+    display: block;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.tagSubCard {
+    font-size: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.horas {
+    font-size: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.unitys {
+    display: block;
+    font-size: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.inputUnitys {
+    height: 70%;
+    width: 95%;
+    background: rgb(80, 66, 66);
+    border-radius: 0.25rem;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+
+/*footer ===========================================*/
+
+footer {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color: var(--darkblue);
+    opacity: 0.6;
+}
+
+
+/* RESPONSIVE =======================================*/
+
+
+/*at (@) rules regras que recebem arroba*/
+
+@media (min-width: 800px) {
+    html {
+        font-size: 87.5%;
+    }
+    #homeDisplay {
+        display:block;
+        gap: 1rem;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        height: 500%;
+    }
+}
+
+#subCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+
+.btn-green {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    width:25%;
+    height: 30%;
+
+}
+
+.btn-yellow {
+    background-color: #d4c600;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    width:25%;
+    height: 30%;
+}
+
+.btn-red {
+    background-color: #640000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    width:25%;
+    height: 30%;
+}
+
+.btn-reset {
+    text-align: left;
+    display: inline-block;
+    align-items: left;
+    cursor: pointer;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+
+    <title>Line Vision</title>
+</head>
+
+
+<body>
+    <header>
+        Line Vision
+    </header>
+    <main class="container">
+        <section id="homeDisplay">
+            <h2 class="sr-only">Home Display</h2>
+            <div id="linha1" class="card">
+                <h3>
+                    <span> Linha 1</span>
+                    <button onclick="startAll();" class="btn-green" id="btnStart">Iniciar</button>
+                    <button onclick="pauseParado();pararContador();" class="btn-yellow" id="btnPause">Parar a
+                        Linha</button>
+                    <button onclick="stopAll();pararContador()" class="btn-red" id="btnStop">Encerrar</button>
+                </h3>
+                <section class="subCards">
+
+                    <div id="tempoATrabalhar1" class="subCard">
+                        <p class="tagSubCard"> A Trabalhar </p>
+                        <h1 id="counter">00:00:00</h1>
+                    </div>
+                    <div id="tempoParado1" class="subCard">
+                        <p class="tagSubCard"> Tempo Parado </p>
+                        <h1 id="counter2">00:00:00</h1>
+                    </div>
+                    <div id="horasDeTrabalho1" class="subCard">
+                        <p class="tagSubCard"> Total do Dia </p>
+                        <h1 id="counter3">00:00:00</h1>
+                    </div>
+                    <div id="totalProducao1" class="subCard">
+                        <p class="tagSubCard"> Produção Planeada </p>
+                        <input type="number" class="inputUnitys" id="inputUnitys1"></input>
+                    </div>
+                    <div id="produzido1" class="subCard">
+                        <p class="tagSubCard"> Produzido </p>
+                        <p class="unitys" id="contador"></p>
+                    </div>
+                    <div id="faltaProduzir1" class="subCard">
+                        <p class="tagSubCard"> Falta Produzir </p>
+                        <p class="unitys" id="unitys3"></p>
+                    </div>
+                </section>
+                <br>
+                <button onClick="window.location.reload()" class="btn-reset" id="btnReset">Reset</button>
+                <!-- <button onclick="reset();" class="btn-reset" id="btnReset">Reset</button> -->
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+<footer>
+
+</footer>
